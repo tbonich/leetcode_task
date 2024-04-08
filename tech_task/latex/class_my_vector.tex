@@ -1,0 +1,154 @@
+\doxysection{My\+Vector Class Reference}
+\hypertarget{class_my_vector}{}\label{class_my_vector}\index{MyVector@{MyVector}}
+
+
+Class \doxylink{class_my_vector}{My\+Vector} refers to the vector in three-\/dimensional space.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_my_vector_adfc4ed4dae2c4c6eca9d18cf15c6a356}{My\+Vector}} (double v\+\_\+x, double v\+\_\+y, double v\+\_\+z)
+\item 
+\mbox{\hyperlink{class_my_vector_a4dc3916b2a3d49529a6d20a1ba766207}{My\+Vector}} (\mbox{\hyperlink{class_my_point}{My\+Point}} \texorpdfstring{$\ast$}{*}p\+\_\+0, \mbox{\hyperlink{class_my_point}{My\+Point}} \texorpdfstring{$\ast$}{*}p\+\_\+1)
+\item 
+\mbox{\hyperlink{class_my_vector_aef4eebf68d788ecb600bd7fcba32d02e}{My\+Vector}} (\mbox{\hyperlink{class_my_segment}{My\+Segment}} \texorpdfstring{$\ast$}{*}s)
+\item 
+\mbox{\hyperlink{class_my_vector}{My\+Vector}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_my_vector_afddabd4d366d50cfeec0186547b6249d}{scalar\+\_\+multiplication}} (double sclr)
+\item 
+double \mbox{\hyperlink{class_my_vector_a140a74a0c00b3c5336aa784085aa0a81}{scalar\+\_\+product}} (\mbox{\hyperlink{class_my_vector}{My\+Vector}} \texorpdfstring{$\ast$}{*}v)
+\item 
+\mbox{\hyperlink{class_my_vector}{My\+Vector}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_my_vector_a28e8841072e7c838993d0bd1890cc05a}{vector\+\_\+product}} (\mbox{\hyperlink{class_my_vector}{My\+Vector}} \texorpdfstring{$\ast$}{*}v)
+\item 
+double \mbox{\hyperlink{class_my_vector_a34bd51ea7272532b26df071479fd1a6d}{length}} ()
+\item 
+\mbox{\hyperlink{class_my_point}{My\+Point}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_my_vector_a5ac79ac99f7fb4de91a25a49c2aabac6}{move\+\_\+point}} (\mbox{\hyperlink{class_my_point}{My\+Point}} \texorpdfstring{$\ast$}{*}p)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_my_vector_a3b71f611c84cfdb07c1621f7953ad897}\label{class_my_vector_a3b71f611c84cfdb07c1621f7953ad897} 
+double {\bfseries x}
+\begin{DoxyCompactList}\small\item\em x-\/coordinate \end{DoxyCompactList}\item 
+\Hypertarget{class_my_vector_afcd6ea5f7993311c27a7322b2b6a254f}\label{class_my_vector_afcd6ea5f7993311c27a7322b2b6a254f} 
+double {\bfseries y}
+\begin{DoxyCompactList}\small\item\em y-\/coordinate \end{DoxyCompactList}\item 
+\Hypertarget{class_my_vector_ad1bc2553fb143aebd90ccecf9f162bde}\label{class_my_vector_ad1bc2553fb143aebd90ccecf9f162bde} 
+double {\bfseries z}
+\begin{DoxyCompactList}\small\item\em z-\/coordinate \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{class_my_vector}{My\+Vector} refers to the vector in three-\/dimensional space. 
+
+A vector is defined by three coordinates x, y, z. A vector can be specified using start and end points, by 3 coordinates of vector or by segment, where the vector points from the first endpoint of segment to the second endpoint. A vector can be multiplied by a scalar. Can be calculated the scalar and vector product of a vector and a given vector. Vector length can be calculated. A given point can be moved by a vector. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_my_vector_adfc4ed4dae2c4c6eca9d18cf15c6a356}\label{class_my_vector_adfc4ed4dae2c4c6eca9d18cf15c6a356} 
+\index{MyVector@{MyVector}!MyVector@{MyVector}}
+\index{MyVector@{MyVector}!MyVector@{MyVector}}
+\doxysubsubsection{\texorpdfstring{MyVector()}{MyVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily My\+Vector\+::\+My\+Vector (\begin{DoxyParamCaption}\item[{double}]{v\+\_\+x,  }\item[{double}]{v\+\_\+y,  }\item[{double}]{v\+\_\+z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a vector at the given three coordinates 
+\begin{DoxyParams}{Parameters}
+{\em v\+\_\+x,v\+\_\+y,v\+\_\+z} & Coordinates \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_my_vector_a4dc3916b2a3d49529a6d20a1ba766207}\label{class_my_vector_a4dc3916b2a3d49529a6d20a1ba766207} 
+\index{MyVector@{MyVector}!MyVector@{MyVector}}
+\index{MyVector@{MyVector}!MyVector@{MyVector}}
+\doxysubsubsection{\texorpdfstring{MyVector()}{MyVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily My\+Vector\+::\+My\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_my_point}{My\+Point}} \texorpdfstring{$\ast$}{*}}]{p\+\_\+0,  }\item[{\mbox{\hyperlink{class_my_point}{My\+Point}} \texorpdfstring{$\ast$}{*}}]{p\+\_\+1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a vector at the given start and end points 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+0} & Start point \\
+\hline
+{\em p\+\_\+1} & End point \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_my_vector_aef4eebf68d788ecb600bd7fcba32d02e}\label{class_my_vector_aef4eebf68d788ecb600bd7fcba32d02e} 
+\index{MyVector@{MyVector}!MyVector@{MyVector}}
+\index{MyVector@{MyVector}!MyVector@{MyVector}}
+\doxysubsubsection{\texorpdfstring{MyVector()}{MyVector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily My\+Vector\+::\+My\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_my_segment}{My\+Segment}} \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a vector at the given segment, where the vector points from the first endpoint of segment to the second endpoint 
+\begin{DoxyParams}{Parameters}
+{\em s} & Segment \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_my_vector_a34bd51ea7272532b26df071479fd1a6d}\label{class_my_vector_a34bd51ea7272532b26df071479fd1a6d} 
+\index{MyVector@{MyVector}!length@{length}}
+\index{length@{length}!MyVector@{MyVector}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily double My\+Vector\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calculates the length of the vector \begin{DoxyReturn}{Returns}
+a number that is equal to the length of the vector 
+\end{DoxyReturn}
+\Hypertarget{class_my_vector_a5ac79ac99f7fb4de91a25a49c2aabac6}\label{class_my_vector_a5ac79ac99f7fb4de91a25a49c2aabac6} 
+\index{MyVector@{MyVector}!move\_point@{move\_point}}
+\index{move\_point@{move\_point}!MyVector@{MyVector}}
+\doxysubsubsection{\texorpdfstring{move\_point()}{move\_point()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_my_point}{My\+Point}} \texorpdfstring{$\ast$}{*} My\+Vector\+::move\+\_\+point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_my_point}{My\+Point}} \texorpdfstring{$\ast$}{*}}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calculates a new point resulting from moving a given point to a vector. 
+\begin{DoxyParams}{Parameters}
+{\em p} & Point to be moved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a point, which is the result of the moving given point by the vector 
+\end{DoxyReturn}
+\Hypertarget{class_my_vector_afddabd4d366d50cfeec0186547b6249d}\label{class_my_vector_afddabd4d366d50cfeec0186547b6249d} 
+\index{MyVector@{MyVector}!scalar\_multiplication@{scalar\_multiplication}}
+\index{scalar\_multiplication@{scalar\_multiplication}!MyVector@{MyVector}}
+\doxysubsubsection{\texorpdfstring{scalar\_multiplication()}{scalar\_multiplication()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_my_vector}{My\+Vector}} \texorpdfstring{$\ast$}{*} My\+Vector\+::scalar\+\_\+multiplication (\begin{DoxyParamCaption}\item[{double}]{sclr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Multiplies a vector by a given scalar 
+\begin{DoxyParams}{Parameters}
+{\em sclr} & Scalar to multiply by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector resulting from multiplying a vector by a scalar 
+\end{DoxyReturn}
+\Hypertarget{class_my_vector_a140a74a0c00b3c5336aa784085aa0a81}\label{class_my_vector_a140a74a0c00b3c5336aa784085aa0a81} 
+\index{MyVector@{MyVector}!scalar\_product@{scalar\_product}}
+\index{scalar\_product@{scalar\_product}!MyVector@{MyVector}}
+\doxysubsubsection{\texorpdfstring{scalar\_product()}{scalar\_product()}}
+{\footnotesize\ttfamily double My\+Vector\+::scalar\+\_\+product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_my_vector}{My\+Vector}} \texorpdfstring{$\ast$}{*}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calculates the scalar product of a vector and a given vector 
+\begin{DoxyParams}{Parameters}
+{\em v} & Vector that participates in the scalar product \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a number that is equal to the scalar product 
+\end{DoxyReturn}
+\Hypertarget{class_my_vector_a28e8841072e7c838993d0bd1890cc05a}\label{class_my_vector_a28e8841072e7c838993d0bd1890cc05a} 
+\index{MyVector@{MyVector}!vector\_product@{vector\_product}}
+\index{vector\_product@{vector\_product}!MyVector@{MyVector}}
+\doxysubsubsection{\texorpdfstring{vector\_product()}{vector\_product()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_my_vector}{My\+Vector}} \texorpdfstring{$\ast$}{*} My\+Vector\+::vector\+\_\+product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_my_vector}{My\+Vector}} \texorpdfstring{$\ast$}{*}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calculates the vector product of a vector and a given vector 
+\begin{DoxyParams}{Parameters}
+{\em v} & Vector that participates in the vector product \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector, which is the result of the vector product 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}

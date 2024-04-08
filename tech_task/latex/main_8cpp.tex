@@ -1,0 +1,79 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+The file contains an algorithm that searches for a point on a polyline that is closest to a given point.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_my_point}{My\+Point}}
+\begin{DoxyCompactList}\small\item\em Class \doxylink{class_my_point}{My\+Point} refers to the point in three-\/dimensional space. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_my_segment}{My\+Segment}}
+\begin{DoxyCompactList}\small\item\em Class \doxylink{class_my_segment}{My\+Segment} refers to the segment in three-\/dimensional space. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_my_vector}{My\+Vector}}
+\begin{DoxyCompactList}\small\item\em Class \doxylink{class_my_vector}{My\+Vector} refers to the vector in three-\/dimensional space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+pair$<$ double, \mbox{\hyperlink{class_my_point}{My\+Point}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{main_8cpp_a3260bee19e45b181871f45a9c67aac9d}{dist\+\_\+point\+\_\+segment}} (\mbox{\hyperlink{class_my_point}{My\+Point}} \texorpdfstring{$\ast$}{*}p, \mbox{\hyperlink{class_my_segment}{My\+Segment}} \texorpdfstring{$\ast$}{*}s)
+\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The file contains an algorithm that searches for a point on a polyline that is closest to a given point. 
+
+The file contains classes that characterize geometric objects such as point, line segment and vector. Function dist\+\_\+point\+\_\+segment calculates the shortest distance from a point to a segment and calculates the point of the segment at which this distance is reached. Function main contains processing of input data for correctness, as well as most of the remaining calculations to solve the problem. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a3260bee19e45b181871f45a9c67aac9d}\label{main_8cpp_a3260bee19e45b181871f45a9c67aac9d} 
+\index{main.cpp@{main.cpp}!dist\_point\_segment@{dist\_point\_segment}}
+\index{dist\_point\_segment@{dist\_point\_segment}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{dist\_point\_segment()}{dist\_point\_segment()}}
+{\footnotesize\ttfamily pair$<$ double, \mbox{\hyperlink{class_my_point}{My\+Point}} \texorpdfstring{$\ast$}{*} $>$ dist\+\_\+point\+\_\+segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_my_point}{My\+Point}} \texorpdfstring{$\ast$}{*}}]{p,  }\item[{\mbox{\hyperlink{class_my_segment}{My\+Segment}} \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})}
+
+Calculates the shortest distance from a point to a segment and calculates the point of the segment at which this distance is reached 
+\begin{DoxyParams}{Parameters}
+{\em p} & Point from which the distance is calculated \\
+\hline
+{\em s} & Segment to which the distance is calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pair of two values the shortest distance (double) from a point to a segment and the point (\doxylink{class_my_point}{My\+Point}) at which this distance is reached. 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Searches for a point on a polyline that is closest to a given point and outputs the number of such points in the console, as well as the points themselves, indicating the segment number. Processes input data for correctness. It is considered that if there is at least one point in a polyline, then the shortest distance from a given point to the polyline does not exceed the distance from a given point to this one point. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & Count of input data \\
+\hline
+{\em argv} & Input array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if there were no errors in input data 
+
+-\/1 if there were insufficient amount of input data 
+
+-\/2 if there were invalid coordinate argument 
+
+-\/3 if there were out of range for a double in coordinate argument 
+
+-\/4 if file does not exist 
+
+-\/5 if the file contains incorrect data at the first point of the polyline 
+\end{DoxyReturn}

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1708592912 source:c:\school\tech_task\main.cpp
+	<iostream>
+	<cmath>
+	<string>
+	<vector>
+	<fstream>
+
